@@ -2,8 +2,8 @@ name: Send a HTTP Request when new RSS item is detected
 on:
   rss:
     url: 
-      - https://hidadeng.github.io/index.xml
-      - https://discuss-cn.bestxtools.com/atom/t/weekly/discussions
+#      - https://hidadeng.github.io/index.xml
+#      - https://discuss-cn.bestxtools.com/atom/t/weekly/discussions
       - https://feeds.feedburner.com/ruanyifeng
       - http://blog.farmostwood.net/feed
       - http://fz0512.com/feed
