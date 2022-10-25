@@ -1,17 +1,26 @@
+name: Send a HTTP Request when new RSS item is detected
 on:
   rss:
-    url: https://hnrss.org/newest?points=300&count=3
+    url: 
+    - https://hidadeng.github.io/index.xml
+    - https://discuss-cn.bestxtools.com/atom/t/weekly/discussions
+    - https://feeds.feedburner.com/ruanyifeng
+    - http://blog.farmostwood.net/feed
+    - http://fz0512.com/feed
 jobs:
-  print:
-    name: Print
+  request:
+    name: Request
     runs-on: ubuntu-latest
     steps:
-      - name: Print Outputs
-        env:
-          title: ${{on.rss.outputs.title}}
-          contentSnippet: ${{on.rss.outputs.contentSnippet}}
-          link: ${{on.rss.outputs.link}}
-        run: |
-          echo title: $title
-          echo contentSnippet: $contentSnippet
-          echo link: $link
+      - name: Make a HTTP Request      
+        uses: actionsflow/axios@main
+        with:
+          url: https://cubox.pro/c/api/save/enlj2f8qjcex3u
+          method: POST
+          body: |
+            {
+              "link":"${{on.rss.outputs.link}}", 
+              "title": "${{on.rss.outputs.title}}",
+              "content":"<<<${{on.rss.outputs.contentSnippet}}>>>",
+              "folder":"收集箱"
+            }
