@@ -4,7 +4,7 @@ on:
     url: 
 #      - https://hidadeng.github.io/index.xml
 #      - https://discuss-cn.bestxtools.com/atom/t/weekly/discussions
-      - https://feeds.feedburner.com/ruanyifeng
+#      - https://feeds.feedburner.com/ruanyifeng
       - http://blog.farmostwood.net/feed
       - http://fz0512.com/feed
 jobs:
