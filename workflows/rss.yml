@@ -6,6 +6,7 @@ on:
       - https://discuss-cn.bestxtools.com/atom/t/weekly/discussions
       - https://feeds.feedburner.com/ruanyifeng
       - http://blog.farmostwood.net/feed
+      - https://www.ezindie.com/feed/rss.xml
 #      - http://fz0512.com/feed
 jobs:
   request:
